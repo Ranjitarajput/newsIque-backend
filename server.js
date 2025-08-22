@@ -8,7 +8,7 @@ app.use(cors());
 
 const NEWS_API_KEY = process.env.NEWS_API_KEY;
 
-app.get("/api/news", async (req,res) => {
+app.get("/", async (req,res) => {
     const {page = 1, pagesize = 10, category="general", searchQuery = "" } = req.query;
     const query = searchQuery ? `&q=${searchQuery}` : "";
     console.log(NEWS_API_KEY);
